@@ -1,0 +1,27 @@
+span {
+  width: 100%;
+  display: table;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+td, th {
+  padding: 15px 5px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  border-radius: 2px;
+}
