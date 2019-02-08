@@ -1,0 +1,22 @@
+@import './shared.scss';
+
+
+.App-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.App-main {
+  grid-column: 3 / span 8;
+  margin-top: 6em;
+}
+
+
+/* Mobile */
+@media screen and (max-width: 800px) {
+  .App-main {
+    grid-column: 1/13;
+    margin-top: 0px;
+  }
+
+}
