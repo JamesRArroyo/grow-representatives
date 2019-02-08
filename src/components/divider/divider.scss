@@ -1,0 +1,12 @@
+.divider{
+	position: relative;
+	height: 1px;
+}
+
+.divider:before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background: #80808030;
+}
