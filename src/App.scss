@@ -4,11 +4,24 @@
 .App-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  margin-top: 6em;
 }
 
 .App-main {
   grid-column: 3 / span 8;
-  margin-top: 6em;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.header{
+  grid-row: 1;
+  grid-column: 1/ span 13;
+}
+
+.rep-list {
+  grid-row: 3;
+  grid-column: 1 / span 6;
 }
 
 
