@@ -22,7 +22,7 @@ class TableRow extends React.Component {
         onClick={()=> this.selectRow(data)}
         className={"" + (this.state.selectedRow === data ? 'selected-tr' : 'asdf')}>
         <td key={data.name}>{data.name}</td>
-        <td key={data.party}>{data.party}</td>
+        <td key={data.party}>{data.party.charAt(0)}</td>
       </tr>
     );
     row.unshift(
