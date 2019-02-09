@@ -1,0 +1,35 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+td, th {
+  padding: 15px 5px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+td {
+  cursor: pointer;
+}
+
+.selected-tr {
+  background-color: #03a7ed;
+}
+
+tr:hover:not(.selected-tr):not(.header-tr) {
+  background-color: #efefef;
+
+}
