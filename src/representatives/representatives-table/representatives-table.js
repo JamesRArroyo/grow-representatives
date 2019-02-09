@@ -26,7 +26,7 @@ class TableRow extends React.Component {
       </tr>
     );
     row.unshift(
-      <tr key="hr">
+      <tr key="hr" className="header-tr">
         <th key="name">Name</th>
         <th key="party">Party</th>
       </tr>

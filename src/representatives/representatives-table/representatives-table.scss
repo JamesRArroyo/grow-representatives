@@ -29,7 +29,7 @@ td {
   background-color: #03a7ed;
 }
 
-tr:hover:not(.selected-tr) {
+tr:hover:not(.selected-tr):not(.header-tr) {
   background-color: #efefef;
 
 }
