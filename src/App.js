@@ -4,6 +4,7 @@ import HeaderBar from './components/header-bar/header-bar';
 import RepresentativesList from './representatives/representatives-list/representatives-list';
 import Divider from './components/divider/divider';
 import RepresentativeSearch from './representatives/representatives-search/representatives-search';
+import RepresentativeDetails from './representatives/representative-details/representative-details';
 
 class App extends React.Component {
   constructor(props) {
@@ -34,6 +35,9 @@ class App extends React.Component {
           </div>
           <div className="rep-list">
             <RepresentativesList representativeType={this.state.representativeType}></RepresentativesList>
+          </div>
+          <div className="rep-details">
+            <RepresentativeDetails></RepresentativeDetails>
           </div>
         </div>
       </div>

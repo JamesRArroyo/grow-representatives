@@ -12,6 +12,7 @@
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 3em;
 }
 
 .header{
@@ -27,6 +28,11 @@
 .rep-list {
   grid-row: 3;
   grid-column: 1 / span 6;
+}
+
+.rep-details {
+  grid-row: 3;
+  grid-column: 7 / span 6;
 }
 
 

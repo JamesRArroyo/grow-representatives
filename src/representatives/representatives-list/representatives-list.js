@@ -13,7 +13,7 @@ class RepresentativesList extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="list-container">
         <h2>List / <b className="primary">{this.props.representativeType}</b></h2>
         <Table data={ reps } />
       </div>
