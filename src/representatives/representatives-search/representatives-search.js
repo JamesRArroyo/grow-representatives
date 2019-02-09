@@ -25,7 +25,6 @@ class RepresentativeSearch extends React.Component {
   }
 
   searchReps(formSubmitEvent) {
-    console.log('called');
     formSubmitEvent.preventDefault();
     const params = {
       'repType': this.state.selectedType,
@@ -36,7 +35,6 @@ class RepresentativeSearch extends React.Component {
       this.props.search(params);
       this.setState({formError: ''});
     } else {
-      console.log(this.state);
       const formError = "Please select the representative's TYPE and STATE before searching.";
       this.setState({formError: formError});
     }
