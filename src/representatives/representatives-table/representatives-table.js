@@ -4,18 +4,23 @@ import './representatives-table.scss';
 class TableRow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      selectedRow: {},
+    }
     this.selectRow = this.selectRow.bind(this);
   }
 
   selectRow(row){
+    this.setState({selectedRow: row});
     this.props.setSelectedRow(row);
   }
 
   render() {
     const { data } = this.props;
     const row = data.map((data, i) =>
-      <tr key={i} onClick={()=> this.selectRow(data)}>
+      <tr key={i} 
+        onClick={()=> this.selectRow(data)}
+        className={"" + (this.state.selectedRow === data ? 'selected-tr' : 'asdf')}>
         <td key={data.name}>{data.name}</td>
         <td key={data.party}>{data.party}</td>
       </tr>

@@ -20,3 +20,16 @@ td, th {
   vertical-align: middle;
   border-radius: 2px;
 }
+
+td {
+  cursor: pointer;
+}
+
+.selected-tr {
+  background-color: #03a7ed;
+}
+
+tr:hover:not(.selected-tr) {
+  background-color: #efefef;
+
+}
