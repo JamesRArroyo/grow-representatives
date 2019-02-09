@@ -30,6 +30,7 @@ class App extends React.Component {
           </div>
           <div className="rep-search">
             <RepresentativeSearch selectedType={this.state.representativeType} search={this.searchReps}></RepresentativeSearch>
+            <Divider></Divider>
           </div>
           <div className="rep-list">
             <RepresentativesList representativeType={this.state.representativeType}></RepresentativesList>

@@ -14,7 +14,7 @@ class RepresentativesList extends React.Component {
   render() {
     return (
       <div className="container">
-        <h3>List / <b className="primary">{this.props.representativeType}</b></h3>
+        <h2>List / <b className="primary">{this.props.representativeType}</b></h2>
         <Table data={ reps } />
       </div>
     )

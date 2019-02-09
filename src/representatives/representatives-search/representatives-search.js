@@ -6,7 +6,7 @@ class RepresentativeSearch extends React.Component {
     super(props);
     this.state = {
       selectedType: this.props.selectedType,
-      selectedState: '',
+      selectedState: 'UT',
       formError: '',
     };
 
