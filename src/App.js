@@ -11,8 +11,10 @@ class App extends React.Component {
     super(props);
     this.state = {
       representativeType: 'Representative',
+      selectedRepresentative: {},
     }
     this.searchReps = this.searchReps.bind(this);
+    this.setRepresentative = this.setRepresentative.bind(this);
   }
 
   searchReps(params) {
@@ -21,12 +23,16 @@ class App extends React.Component {
     this.setState({'representativeType': repType});
   }
 
+  setRepresentative(rep) {
+    this.setState({'selectedRepresentative': rep});
+  }
+
   render() {
     return (
       <div className="App-container">
         <div className="App-main">
           <div className="header">
-            <HeaderBar title="Who's My Representative"></HeaderBar>
+            <HeaderBar title="Who's My Representative?"></HeaderBar>
             <Divider></Divider>
           </div>
           <div className="rep-search">
@@ -34,10 +40,10 @@ class App extends React.Component {
             <Divider></Divider>
           </div>
           <div className="rep-list">
-            <RepresentativesList representativeType={this.state.representativeType}></RepresentativesList>
+            <RepresentativesList setRepresentative={this.setRepresentative} representativeType={this.state.representativeType}></RepresentativesList>
           </div>
           <div className="rep-details">
-            <RepresentativeDetails></RepresentativeDetails>
+            <RepresentativeDetails representative={this.state.selectedRepresentative}></RepresentativeDetails>
           </div>
         </div>
       </div>

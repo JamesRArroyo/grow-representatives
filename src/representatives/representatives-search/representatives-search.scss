@@ -36,6 +36,9 @@
 
     .s-rep-state {
       grid-column: 4 / span 2;
+      label {
+        margin:3em;
+      }
     }
 
     .s-actions {
