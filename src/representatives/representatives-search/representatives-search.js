@@ -5,8 +5,9 @@ class RepresentativeSearch extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      'selectedType': this.props.selectedType,
-      'selectedState': 'UT',
+      selectedType: this.props.selectedType,
+      selectedState: '',
+      formError: '',
     };
 
     // Bind instance
@@ -24,6 +25,7 @@ class RepresentativeSearch extends React.Component {
   }
 
   searchReps(formSubmitEvent) {
+    console.log('called');
     formSubmitEvent.preventDefault();
     const params = {
       'repType': this.state.selectedType,
@@ -32,8 +34,11 @@ class RepresentativeSearch extends React.Component {
 
     if (params.repType && params.repState) {
       this.props.search(params);
+      this.setState({formError: ''});
     } else {
-      console.log('Required');
+      console.log(this.state);
+      const formError = "Please select the representative's TYPE and STATE before searching.";
+      this.setState({formError: formError});
     }
   }
   render() {
@@ -62,6 +67,9 @@ class RepresentativeSearch extends React.Component {
             <button className="button" onClick={this.searchReps}>Search</button>
           </div>
         </form>
+        <div className={"s-error " + (this.state.formError !== '' ? 'show' : 'hide')}>
+          <h3>Error: {this.state.formError}</h3>
+        </div>
       </div>
     )
   }

@@ -1,5 +1,7 @@
 @import '../../shared.scss';
 
+.show {display: grid;}
+.hide {display: none;}
 .search-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -9,12 +11,24 @@
     grid-column: 1 / 13;
   }
 
+  .s-error {
+    grid-row: 3;
+    grid-column: 1 / 13;
+    color: red;
+    background-color: #ef3f3f73;
+    border-radius: 10px;
+    h3 {
+      margin-left: 1em;
+    }
+  }
+
   .search-form {
     grid-row: 2;
     grid-column: 1 / 13;
 
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    align-items: center;
 
     .s-rep-type {
       grid-column: 1 / span 2;
